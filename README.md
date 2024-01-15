@@ -105,3 +105,9 @@ mongorestore dump/
 More info on mongodb can be found here:
 https://www.mongodb.com/docs/manual/installation/
 https://www.mongodb.com/docs/manual/tutorial/backup-and-restore-tools/
+
+
+If you are not using VSCode, simply create a Python venv from inside the cloned repo directory, and then run:
+```
+pip install -r requirements.txt
+```
