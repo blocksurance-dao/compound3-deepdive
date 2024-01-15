@@ -8,6 +8,7 @@ The goal of the deep dive was to test the mathematical core. Several steps were 
 1) The Comet contracts were mined using the CometMiner.py included with this repository, and the data stored in MongoDB. The miner targeted the Supply event, and obtained additional data following these schema:
 
 supply collection
+```json
 {
     "from" : "0x4091243E3fB5E637D06c265C6EAe1Be7fb8460Ce",
     "dst" : "0x4091243E3fB5E637D06c265C6EAe1Be7fb8460Ce",
@@ -21,8 +22,9 @@ supply collection
     "totalBorrow" : 390089450.758417,
     "reserves" : 1334336.549036
 }
-
+```
 slopeRates collection
+```json
 {
     "block" : 18896476,
     "utilization" : 0.9785596249484667,
@@ -35,10 +37,11 @@ slopeRates collection
     "supplyKink" : 0.93,
     "borrowKink" : 0.93
 }
-
+```
 2) Additional calculations were made to determine the theoretical breakeven rates based on the recorded supplyRate and utilization Calculate.ipynb, adding additional fields to the supply collection. (brekevenRate, works) The purpose was to determine whether the borrowRate used on every event block is in fact above the theoretical breakeven rate for the supplyRate and utilization. If it was, then the formula works, and was marked accordingly.
 
 supply collection
+```json
 {
     "from" : "0x4091243E3fB5E637D06c265C6EAe1Be7fb8460Ce",
     "dst" : "0x4091243E3fB5E637D06c265C6EAe1Be7fb8460Ce",
@@ -54,7 +57,7 @@ supply collection
     "breakevenRate" : 0.22082729576744994,
     "works" : false
 }
-
+```
 3) This data is now shared via MongoDB Atlas, in case you don't want to spend the time mining the Compound Finance smart contracts. Fire up Visualize.ipynb and make queries this way. Also, the mongodump of the database is included with this repo. In case you want to mongorestore locally.
 
 
