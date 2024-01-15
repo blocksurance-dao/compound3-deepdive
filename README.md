@@ -72,3 +72,21 @@ When this occurs, the protocol is bleeding chips from the reserve.
 
 Furthermore, the protocol does not have a safeguard from utilization getting above 100%. 
 As I mentioned earlier, utilization = totalBorrow/totalSupply. The protocol also features a reserve. What that does is create a situation where the totalBorrow can in fact become greater than the totalSupply, pushing the utilization rate above 100%. The getSupplyRate and getBorrowRate functions however are not equipped to handle this scenario producing theoretically incorrect reading on the rates. 
+
+
+# running the files
+git clone https://github.com/blocksurance-dao/compound3-deepdive.git
+
+after that open the folder in VSCode, create a Python3 venv through the VSCode command pallet, and activate the env in the VSCode terminal
+
+```
+. ./.venv/bin/activate
+```
+
+Once the env is activated, run jupyter notebook via
+
+```
+jupyter notebook
+```
+
+https://nbviewer.org/github/blocksurance-dao/compound3-deepdive/blob/main/Visualize.ipynb
