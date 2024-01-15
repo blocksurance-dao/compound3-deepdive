@@ -59,7 +59,7 @@ supply collection
 
 
 SUMMARY:
-The key driver of the Compound Protocol is the utilization variable, which is derived based on the ration of the totalSupply and the totalBorrow. 
+The key driver of the Compound Protocol is the utilization variable, which is derived based on the ratio of the totalSupply and the totalBorrow. 
 
 utilization = totalBorrow/totalSupply
 
