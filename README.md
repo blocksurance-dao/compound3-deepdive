@@ -89,4 +89,19 @@ Once the env is activated, run jupyter notebook via
 jupyter notebook
 ```
 
+You can also view the Jupyter Notebooks via nbviewer:
 https://nbviewer.org/github/blocksurance-dao/compound3-deepdive/blob/main/Visualize.ipynb
+
+
+In order to restore the DB locally you need to:
+    1) install mongodb
+    2) extract the dump archive included with the repo
+    3) mongorestore dump from the directory above
+
+```
+mongorestore dump/
+```
+
+More info on mongodb can be found here:
+https://www.mongodb.com/docs/manual/installation/
+https://www.mongodb.com/docs/manual/tutorial/backup-and-restore-tools/
