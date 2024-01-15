@@ -61,8 +61,11 @@ supply collection
 SUMMARY:
 The key driver of the Compound Protocol is the utilization variable, which is derived based on the ration of the totalSupply and the totalBorrow. 
 
-utilization = totalBorrows/totalSupply
+utilization = totalBorrow/totalSupply
 
 Slope rates are used in conjunction with the utilization figures to determine what the borrow and supply rates should be at the time. Slope rates are left for manual adjustment by the DAO. Because the nature of the lending market is dynamic, the data shows that those rates are not adjusted fast or accurately enough, which causes about 10% of the transactions to show the borrow rate which is lower than the theoretical breakeven rate for the current utilization and supplyRate.
 
 When this occurs, the protocol is bleeding chips from the reserve.
+
+Furthermore, the protocol does not have a safeguard from utilization getting above 100%. 
+As I mentioned earlier, utilization = totalBorrow/totalSupply. The protocol also features a reserve. What that does is create a situation where the totalBorrow can in fact become greater than the totalSupply, pushing the utilization rate above 100%. The getSupplyRate and getBorrowRate functions however are not equipped to handle this scenario producing theoretically incorrect reading on the rates. 
