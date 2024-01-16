@@ -90,7 +90,7 @@ jupyter notebook
 ```
 
 You can also view the Jupyter Notebooks via nbviewer:
-https://nbviewer.org/github/blocksurance-dao/compound3-deepdive/blob/main/Visualize.ipynb
+https://nbviewer.org/github/blocksurance-dao/compound3-deepdive/blob/main/Visualize.ipynb?flush_cache=true
 
 
 In order to restore the DB locally you need to:
